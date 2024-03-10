@@ -39,7 +39,7 @@ async function fun() {
             born = born + 1;
             console.log('incrementing born value to new value ' + born);
             await docRef.update({ born });
-            await new Promise((resolve) => setTimeout(resolve, 20000));
+            new Promise((resolve) => setTimeout(resolve, 20000),()=>{});
         }
     }).catch(() => {
         console.log(`$dateTime insert failed`);
